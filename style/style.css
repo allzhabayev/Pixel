@@ -1,0 +1,426 @@
+body { 
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    margin: 0; 
+  
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    
+  margin: 0; /* убираем отступы по умолчанию */
+  height: 100vh; /* минимальная высота окна */
+  
+  /* градиент */
+  background: radial-gradient(ellipse farthest-side at 90px 80px, red, rgba(0, 0, 0, 0.945)) no-repeat;
+  
+  /* растягиваем на весь экран */
+  background-size: cover;
+  
+  /* фиксируем при прокрутке */
+  background-attachment: fixed;
+  
+  /* для красивого заполнения */
+  background-position: center;}
+header {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    height: fit-content;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    right: 0px;
+    bottom: auto;
+    width: 100%;
+  
+  
+}
+
+
+
+select {
+    background-color: #cb0000;
+    border-radius: 5px;
+    color: white;
+    width: 120px;
+    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+
+     cursor: pointer;
+
+    margin-left: 100px;
+}
+select {
+  width: fit-content;
+  min-width: 110px;
+  margin-right: 3px;
+}
+
+#dynamicSelect {
+  transition: width 0.3s ease;
+  padding: 10px 10px 10px 20px; /* отступ под стрелку */
+  background-color: #cb0000;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+select:hover {
+    background-color: #cb0000;
+    box-shadow: #cb0000 0px 0px 10px;
+    color: white;
+    font-size: 16px;
+    transform: scale(1.05);
+    cursor: pointer;
+
+    }
+.Px {
+    display: flex;
+    flex-direction: column;
+    margin:10px;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+}
+.Px p{
+    color: white;
+    font-size: 22px;
+    letter-spacing: 3px;
+    font-family: "Tiny5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+     cursor: pointer;
+    transition: all 0.1s ease;
+    margin-top: auto;
+    margin-bottom:auto;
+}
+.Px p:hover {
+    color: #cb0000;
+    font-size: 24px;
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    }
+.headerBtn {
+    background-color: #cb0000;
+    border-radius: 5px;
+    width: 120px;
+    color: white;
+    font-size: 14px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    margin-right: 100px;
+}
+.headerBtn:hover {
+    background-color: #cb0000;
+    box-shadow: #cb0000 0px 0px 10px;
+    color: white;
+    font-size: 14px;
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.headerAnim {
+  margin: 0;
+  font: 100px/1em  "Tiny5", sans-serif;
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 3px #eee;
+  background-image: linear-gradient(90deg, transparent, white, transparent),
+    linear-gradient(90deg, transparent 5px, #f48024 5px, #f48024 10px),
+    linear-gradient(270deg, transparent 4px, #f48024 5px, #f48024 10px);
+  background-size: 1em 1em, 10px 0, 10px 0;
+  background-repeat: no-repeat no-repeat, repeat no-repeat, repeat no-repeat;
+  background-position: -20% 0, 0 11%, 0 81%;
+  background-blend-mode: color-burn, screen, screen;
+  -webkit-filter: drop-shadow(0 0 20px white) drop-shadow(0 0 8px white);
+  filter: drop-shadow(0 0 20px white) drop-shadow(0 0 8px white);
+  animation: orange_lines 3s ease-out infinite alternate,
+    blink 2s ease-in-out infinite alternate;
+}
+@keyframes orange_lines {
+  to {
+    background-size: 1em 1em, 10px 100%, 10px 100%;
+    -webkit-filter: drop-shadow(1px 2px 1px black) drop-shadow(0 0 3px black);
+    filter: drop-shadow(1px 2px 1px black) drop-shadow(0 0 3px black);
+    -webkit-text-stroke: 6px #bcbbbb;
+  }
+}
+@keyframes blink { to { background-position: 120% 0, 0 11%, 0 81%; } }
+
+
+
+main {
+    margin-top: 250px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    width: fit-content;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h1  {
+    font-size: 56px;
+   
+    width: 1000px;
+}
+.screenshot {
+   background-image: url('./img/screenshot.png');
+   background-size: contain;
+   height: 780px;
+   width:  1275px;
+   border-radius: 10px;   
+   display: flex;
+   flex-direction: row-reverse; 
+}
+.screenshotBTN {
+    background-color: #ffd800;
+    border-radius: 5px;
+    height: 30px;
+    color: rgb(0, 0, 0);
+    animation-name: animate1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    margin-top: 2px;
+    margin-right: 3px;
+ transform: scale(1.01);
+}
+
+@keyframes animate1
+{
+0%{box-shadow: 0 0 0 0 #ffd800, 0 0 0 0 #ffd800;}
+40%{box-shadow: 0 0 0 0 rgba(255,4,0,0), 0 0 0 20px rgba(255, 4, 0, 0.107);}
+80%{box-shadow: 0 0 0 0 rgba(255,4,0,0), 0 0 0 70px rgba(255,4,0,0);}    
+100%{box-shadow: 0 0 0 0 #ffd800, 0 0 0 30px rgba(0, 0, 0, 0);}
+}
+
+ .screenshotBTN:hover {
+    background-color: #ffd800;
+    box-shadow: #ffd800 0px 0px 10px;
+    color: black;
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: all 0.1s ease;
+ }
+.option {
+    margin-top: 50px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    width: 800px;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.option p {
+    margin: 5px;
+    color: #ffffffa9;
+    font-size: 16px;
+    width: 700px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.examples {
+    margin-top: 20px;
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+
+ 
+}
+.examples p {
+    font-size: 14px;
+    color: #ffffffa9;
+    width: 100px;
+    margin-right: 20px;
+    margin-left: 20px;
+    align-items: center;
+    text-align: center;
+    overflow-wrap: normal;
+}   
+
+.example1, .example2, .example3, .example4, .example5, .example6 {
+    background-color: #00000011;
+    border-radius: 10px;
+    height: 150px;
+    width: 1000px;
+    color: white;
+    display: flex;  
+    align-items: center;
+    justify-content: space-around;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.example1:hover, .example2:hover, .example3:hover, .example4:hover, .example5:hover, .example6:hover {
+    background-color: #00000034;
+    color: white;
+    transform: scale(1.02);
+    cursor: pointer;
+    transition: all 0.2s ease;
+ }
+.examples img {
+    height: 120px;
+    width: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+.examples img:hover {
+    transform: scale(1.90);
+    transition: all 0.2s ease;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer  {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    height: fit-content;
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: static;
+    bottom: 0;
+    left: 0px;
+    right: 0px;
+    top: auto;
+    width: 100%;
+    padding: 10px 0;
+    gap: 10px;
+}
+footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+footer img {
+    height: 20px;
+    width: auto;
+    margin-right: 0px;
+    border-radius: 3px;
+}
+.footer_icons {
+    display: flex;
+    align-items: center;
+margin-top: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    gap: 10px;
+}
+.footer_links {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    flex-direction: row;
+  
+}
+.footer_links p {
+    font-size: 14px;
+    color: #ffffffa9;
+    margin: 0 5px;
+}
+.footer_text {
+    font-size: 14px;
+    color: #ffffffa9;
+
+   
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+/* Эффект уменьшения хедера при скролле */
+header {
+  transition: all 0.3s ease;
+  height: fit-content;
+}
+
+header.shrink {
+  height: 80px;
+  background-color: rgb(0, 0, 0);
+  backdrop-filter: blur(5px);
+}
+
+/* Анимация для логотипа и текста */
+.Px h1.headerAnim {
+    
+  font-size: 100px;
+  transition: font-size 0.3s ease, filter 0.3s ease;
+}
+
+header.shrink .Px h1.headerAnim {
+    margin-top: 30px;
+  font-size: 70px;
+  filter: drop-shadow(0 0 5px #cb0000);
+}
+
+.Px p {
+    
+  transition: font-size 0.3s ease, opacity 0.3s ease;
+}
+
+header.shrink .Px p {
+  
+  opacity: 0;
+}
