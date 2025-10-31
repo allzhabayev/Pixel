@@ -1,212 +1,88 @@
-<!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-  <meta charset="UTF-8">
- 
-<div id="root"></div>
-
-fucntion App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
-}
-
-<link rel="stylesheet" href="style.css">
-   <body>
-     <aside class="sidebar">
-        <div class="sidebar-top">
-          <div class="logo">  
-            <div class="logo-m"><span>Multi</span></div>
-               <span class="logo-t">task</span>
-          </div>
-    
-    
-      <div class="sidebar-avatar">
-        <div class="sidebar-avatar-ava"></div> 
-         <div class="text-avatar-sidebar">
-          <span>Ольжабаев Алибек</span>
-          <p>allzhabayev@gmail.com</p>
-         </div>
-      </div>
-
-      <p>0 Выполненных задач <img src="img\ok.svg"></p>
-
-    <div  class="iconsidebar">
-      <div class="counter"> 
-          <span >10</span>
-          <a href=""><img src="img\iconsidebar1.svg"></a>
-          <p>Инициатива</p> 
-      </div>
-      <div class="counter"> 
-          <span >120К</span>
-          <a href=""><img src="img\iconsidebar2.svg"></a>
-          <p>Продуктивность</p> 
-      </div>
-      <div class="counter"> 
-          <span >130К</span>
-          <a href=""><img src="img\iconsidebar3.svg"></a>
-          <p>Оперативность</p> 
-      </div>
-    </div>
-  </div>
-
-
-
-
-    <div class="sidebar-search"><button>Найти чат или задачу <img src="img\Vector.svg"></button></div>
-    
-    
-    
-    
-    
-    
-    
-    <!-- Блоки чата -->
-    <div class="sidebar-bottom">
-
-      <div class="box-sidebar">
-          <div class="ava-1"></div> 
-            <div class="text-bottom-bar">
-             <span>Иван</span>
-              <p>Перезвонить 421asdasdad1212</p>
-            </div>
-          </div>
- </div>  <!-- Конец -->
-        
-      <div class="box-sidebar">
-          <div class="ava-2"></div> 
-          <div class="text-bottom-bar">
-            <span>Анна Степановна</span>
-            <p>Заполнить входящие звон..</p>
-          </div>
-      </div>
- </div>  <!-- Конец -->
-       
-      <div class="box-sidebar">
-          <div class="ava-3"></div> 
-          <div class="text-bottom-bar">
-            <span>Арсений Лазарев</span>
-            <p>Сходить в магазин</p>
-          </div>
-      </div>
- </div>  <!-- Конец -->
-       
-      <div class="box-sidebar">
-          <div class="ava-4"></div> 
-          <div class="text-bottom-bar">
-            <span>Светлана Адалин</span>
-            <p>Заполнить входящие звон..</p>
-          </div>
-      </div>
- </div>  <!-- Конец -->
-      
-      <div class="box-sidebar">
-          <div class="ava-5"></div> 
-          <div class="text-bottom-bar">
-            <span>Федор Антонович</span>
-            <p>Заполнить входящие звон..</p>
-          </div>
-      </div>
- </div>  <!-- Конец -->
-       
-      <div class="box-sidebar">
-          <div class="ava-6"></div> 
-          <div class="text-bottom-bar">
-            <span>Абугали Амало</span>
-            <p>Заполнить входящие звон..</p>
-          </div>
-      </div>
- </div>  <!-- Конец -->
-      
-      <div class="box-sidebar">
-          <div class="ava-7"></div> 
-          <div class="text-bottom-bar">
-            <span>[Центр] Тех. отдел ...</span>
-            <p>Подключение Абая 40</p>
-          </div>
-      </div>
- </div>  <!-- Конец -->
-       
-      <div class="box-sidebar">
-          <div class="ava-8"></div> 
-          <div class="text-bottom-bar">
-            <span>McDonald's </span>
-            <p>Ценовое предложение на..</p>
-          </div>
-      </div>
- </div>  <!-- Конец -->
-      
-      <div class="box-sidebar">
-          <div class="ava-9"></div> 
-          <div class="text-bottom-bar">
-            <span>Starbucks</span>
-            <p>Ценовое предложение на..</p>
-          </div>
-      </div>
- </div>  <!-- Конец -->
-      
-      <div class="box-sidebar">
-          <div class="ava-10"></div> 
-          <div class="text-bottom-bar">
-            <span>Олег</span>
-            <p>Ценовое предложение на..</p>
-          </div>
-      </div>
- </div>  <!-- Конец -->
-           
-      <div class="box-sidebar">
-          <div class="ava-11"></div> 
-          <div class="text-bottom-bar">
-            <span>Руперт</span>
-            <p>Перезвонить 421asdasdad1212</p>
-          </div>
-      </div>
-    </div>
- </div>  <!-- Конец -->
-
-
-  </aside>
-
-  <header>
-
-        <div class="header-avatar">
-      <div class="header-avatar-ava"></div> 
-      <div class="text-avatar-header">
-        <span>Добро пожаловать! Ольжабаев Алибек  </span>
-        <p>Multi task</p>
-      </div>
-    </div>
-    <div class="pust"></div>
-  <div  class="iconsidebar-header">
-      <div class="counter"> 
-          <span >+99</span>
-          <a href=""><img src="img\iconsidebar1.svg"></a>
+    <title>Sample HTML Page</title> 
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <select name="text" id="dynamicSelect">
+            <option value="" selected hidden>Меню</option>
+            <option value="about">О нас</option>
+            <option value="privacy">Политика конфидициальности</option>
+            <option >Часто задаваемые вопросы</option>
+        </select>
+        <div class="Px">
+            <h1 class="headerAnim">Pixel</h1>
+            <p>Графический редактор</p> 
+        </div>
+            <button class="headerBtn">НАЧАТЬ</button>
+    </header>
+<main>
+    <h1>Pixel — это бесплатный онлайн-редактор для анимированных спрайтов и пиксель-арта</h1>
+    <p>Создавайте персонажей, анимацию и тайлы прямо в браузере.</p>
+        <div class="screenshot"> 
+            <button class="screenshotBTN">Create Sprite</button>
+        </div>
+            <br>
+        <div class="option">
+            <h2>Примеры     👇   👇   👇 </h2>
+            <p>Pixel — это адаптированная для детей версия редактора Piskel, разработанная с учётом требований безопасности и отсутствия отвлекающих факторов.</p>
+            <p>Предварительный просмотр в реальном времени ваших спрайтов в различных условиях.</p>
           
-      </div>
-  </header>
+        </div>
 
-  <main>
-    <div class="content">
-
-
-
-    </div>
-  </main>
-
-  <aside class="Notification">Новое уведомление!</aside>
-
-  <footer>
-     <input type="text" class="input_Add_Todo"  placeholder="＋ Добавить задачу"></input>
-
-<img class="addTodo" src="img\send.svg">
-  </footer>
-  <script src="taskMatrix.js"></script>
+        <div class="examples">
+                <div class="example1">
+                <p>Примеры спрайтов</p> 
+                <img src='sprites/examples/zooming-panda.gif'>
+                <img src='sprites/examples/jumping-lama.gif'>
+                <img src='sprites/examples/snake-pattern.gif'>
+                <img src='sprites/examples/little-piskel-man.gif'>
+                <img src='sprites/examples/github-octopuss.gif'>
+                <img src='sprites/examples/losange-pattern.gif'>
+            </div>
+            <div class="example2">
+                <p>Геймбой ретро</p>
+                <img src='sprites\gameboisprites\gameboy-pebonius-girl.gif'>
+                <img src='sprites\gameboisprites\gameboy-pebonius-tileset.gif'>
+                <img src='sprites\gameboisprites\gameboy-pebonius-run-down.gif'>
+                <img src='sprites\gameboisprites\gameboy-pebonius-run-left.gif'>
+                <img src='sprites\gameboisprites\gameboy-pebonius-run-right.gif'>
+                <img src='sprites\gameboisprites\gameboy-pebonius-run-up.gif'>
+            </div>
+            <div class="example3">
+                <p>Многослойные фоны</p>
+                <img src='sprites\backgrounds\background-ansimuz-darkforest.gif'>
+                <img src='sprites\backgrounds\background-fabinhosc-city.gif'>
+                <img src='sprites\backgrounds\background-shackhal-videogame.gif'>
+            </div>
+            <div class="example4">
+                 <p>Наборы плиток</p>
+                <img src='sprites\Tilesets\tileset-buch-colony.gif'>
+                <img src='sprites\Tilesets\tileset-armm1998-zelda.gif'>
+                <img src='sprites\Tilesets\tileset-buch-dungeon.gif'>
+                <img src='sprites\Tilesets\tileset-shade-weapons.gif'>
+                <img src='sprites\Tilesets\tileset-surt-pipes.gif'>
+                <img src='sprites\Tilesets\tileset-surt-forest.gif'>
+            </div>
+        </div>
+</main>
+    <footer>
+        <div class="footer_icons">
+            <div class="footer_links">
+                <img src='img\github-logo.png'> 
+                <a href="https://github.com/piskelapp/piskel">GitHub</a>
+                <p>Ознакомьтесь с исходным кодом на GitHub</p>
+            </div>
+            <div class="footer_links">
+                <img src='img\support-icon.png'> 
+                <a href="https://github.com/piskelapp/piskel">Поддержка</a>
+                <p>Часто задаваемые вопросы</p>
+            </div>
+        <div>
+    </footer>
+    <script src="script.js"></script>
 </body>
-
-
-
-
-
 </html>
