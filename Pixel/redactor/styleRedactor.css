@@ -1,0 +1,89 @@
+body{
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
+}
+.color-palette{
+    
+    height: 100%;
+    width: 150px;
+    margin: 0;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.colorSelection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+
+.Red{
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+.Green{
+    background-color: green;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+.Yellow{
+    background-color: yellow;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+.Black{
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+.Gray{
+    background-color: rgb(114, 114, 114);
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+
+
+.field{
+   
+    width: 60vw;
+    height: 30vw;
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    gap: .5px;
+}
+
+.cell{
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.123);
+}
