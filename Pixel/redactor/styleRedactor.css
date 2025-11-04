@@ -3,7 +3,9 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+    background-color: black;
 }
+
 main{
     display: flex;
     flex-direction: row;
@@ -23,7 +25,7 @@ main{
    align-items: center;
 }
 
-.colorSelection{
+.color-palette{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,36 +35,39 @@ main{
 
 
 
+.color-sell {
+   border:rgb(114, 114, 114) solid 1px;
 
-.Red{
+}
+.red{
     background-color: red;
     width: 30px;
     height: 30px;
     margin-top: 10px;
     border-radius: 50%;
 }
-.Green{
+.green{
     background-color: green;
     width: 30px;
     height: 30px;
     margin-top: 10px;
     border-radius: 50%;
 }
-.Yellow{
+.yellow{
     background-color: yellow;
     width: 30px;
     height: 30px;
     margin-top: 10px;
     border-radius: 50%;
 }
-.Black{
+.black{
     background-color: black;
     width: 30px;
     height: 30px;
     margin-top: 10px;
     border-radius: 50%;
 }
-.Gray{
+.grey{
     background-color: rgb(114, 114, 114);
     width: 30px;
     height: 30px;
@@ -85,5 +90,8 @@ main{
 .cell{
     width: 15px;
     height: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.123);
+    border: 1px solid rgba(232, 232, 232, 0.717);
+}
+#eraser{
+    margin-top: 10px;
 }
