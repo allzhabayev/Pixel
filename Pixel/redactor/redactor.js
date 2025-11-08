@@ -95,21 +95,16 @@ for (let i = 0; i < color_cells.length; i++){
            FILL_MODE = false; 
         if(color_cell.classList.contains("red")){
         colorClass = "red";
-        console.log('red')
+       
         } 
         
         else if (color_cell.classList.contains("green")){
-            console.log('green')
-         
             colorClass = "green"} 
         else if (color_cell.classList.contains("yellow")){
-            console.log('yellow')
             colorClass = "yellow"}
         else if (color_cell.classList.contains("black")){
-            console.log('black')
             colorClass = "black"}
         else if (color_cell.classList.contains("grey")){
-            console.log('grey')
             colorClass = "grey"}
             
         CURRENT_COLOR = COLOR_MAP[colorClass];
@@ -130,3 +125,59 @@ document.querySelector('.eraser').addEventListener('click', function(){
 
 
 
+var COLORS = [
+    "rgba(0, 0, 0, 1)", // 0 Ластик
+    "rgb(255, 0, 0)", // 1 Красный
+    "rgba(55, 255, 0, 1)", // 2 Зеленый
+    "rgba(250, 230, 0, 1)", // 3 Желтый
+    "rgba(0, 0, 0, 0.72)", // 4 Черный
+    "rgba(154, 154, 154, 1)"// 5 Серый
+];
+
+setInterval(function(){
+    let result= '';
+    let temp_cells = document.querySelectorAll('.cell');
+    
+    for (let i = 0; i < temp_cells.length; i++){
+        let cell = temp_cells[i];
+        let color = cell.style.backgroundColor;
+
+        let colorIndex = "0"; // по умолчанию Ластик
+        for (let j = 0; j < COLORS.length; j++){
+            if (color === COLORS[j]){
+                colorIndex = j.toString();
+                
+                break;
+                
+            }
+        }
+       
+        result += colorIndex;
+    }
+    document.cookie = `pixel-result=${result};max-age=1000000`;
+
+  
+}, 60000);
+
+
+function get_result_from_cookie(){
+    let cookies = document.cookie.split('; ');
+    for (let i = 0; i < cookies.length; i++){
+        let cookie = cookies[i].split('=');
+        console.log(cookie);
+        if (cookie[0] === 'pixel-result'){
+            return cookie[1];
+        }
+    }
+    return '0' * 450;
+}
+let temp_result = get_result_from_cookie();
+if (temp_result != '0') {
+    for (let i = 0; i < 450; i++){  
+    let cell = document.createElement('div')
+    cell.classList.add('cell')
+    cell.setAttribute('id', `${i}`)
+    cell.style.backgroundColor = COLORS[parseInt(temp_result[i])]    
+    field.appendChild(cell)
+}
+}
